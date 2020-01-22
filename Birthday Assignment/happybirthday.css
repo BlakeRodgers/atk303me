@@ -1,0 +1,39 @@
+Body {
+background-image: url("picture1.jpg");
+background-size: contain;
+ background-position: centered;
+font-family: Helvetica;
+color: red;
+text-align: center;
+border-top: 10px;
+border-right: 20px;
+border-bottom: 5px;
+border-left: 2px;
+border-radius: 5px;
+}
+
+.bigfont {
+  font-family: Helvetica;
+  font-size: 72px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.survey {
+  padding-left: 950px;
+  padding-top: none;
+}
+iframe {
+  float:  left;
+  margin: 0px;
+  width: 400px;
+
+}
+
+main {
+  width: 650px;
+   margin-left: 0px;
+   margin-right: auto;
+  grid-column: span 3;
+  padding-bottom: 25px;
+}
