@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 2</title>
+    <link href="1.29.20style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://malsup.github.com/jquery.cycle.all.js"></script>
+    <script>
+
+    $(document).ready(function() {
+
+      alert ("Testing JQuery");
+
+      $('.slideshow').cycle({
+      		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+      	});
+
+
+    $('nav a').bind('click',function(event){
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - 0
+      }, 1000);
+      event.preventDefault();
+    });
+  });
+</script>
+  </head>
+  <body>
+    <h1 id="home">Assignment 2</h1>
+
+</nav>
+
+<div class="slideshow">
+		<img src="https://malsup.github.com/images/beach1.jpg" width="1000" height="1000" />
+		<img src="https://malsup.github.com/images/beach2.jpg" width="1000" height="1000" />
+		<img src="https://malsup.github.com/images/beach3.jpg" width="1000" height="1000" />
+		<img src="https://malsup.github.com/images/beach4.jpg" width="1000" height="1000" />
+		<img src="https://malsup.github.com/images/beach5.jpg" width="1000" height="1000" />
+	</div>
+
+  </body>
+</html>
