@@ -1,0 +1,202 @@
+
+  .slideshow {
+    margin:0 auto;
+    padding-top: 50px;
+    height: 1000px;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+  .content{
+    margin:auto;
+    width: 200px;
+    perspective: 1000px;
+    position:relative;
+    padding-top: 80px;
+  }
+  .content-carrousel{
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotate 45s infinite linear;
+    transform-style: preserve-3d;
+  }
+  .content-carrousel:hover{
+    animation-play-state:paused;
+    cursor: pointer;
+  }
+
+  .content-carrousel figure{
+    width: 100%;
+    height: 250px;
+    border: 1px solid #00000;
+    overflow:hidden;
+    position: absolute;
+  }
+  .content-carrousel figure:nth-child(1){
+    transform:rotateY(0deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(2){
+    transform:rotateY(40deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(3){
+    transform:rotateY(80deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(4){
+    transform:rotateY(120deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(5){
+    transform:rotateY(160deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(6){
+    transform:rotateY(200deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(7){
+    transform:rotateY(240deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(8){
+    transform:rotateY(280deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(9){
+    transform:rotateY(320deg) translateZ(300px);
+  }
+.shadow{
+position:aboslute;
+box-shadow: 0px 0px 20px 0px #ffffff;
+border-radius:2px;
+}
+.content-carrousel img{
+image-rendering:auto;
+transition:all 300ms;
+width: 100%;
+height: 100%;
+}
+.content-carrousel img:hover{
+transform:scale(1.2);
+transition:all 300ms;
+}
+@keyframes rotate{
+from{
+  transform:rotateY(0deg);
+} to{
+  transform:rotateY(360deg);
+}
+}
+
+
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00000;
+}
+
+ li a{
+   color: white;
+   display:inline-block;
+     float: right;
+     margin: 10px;
+     font-family: Helvetica;
+   }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  background-image: url("blackhole.gif");
+  background-repeat: none;
+  background-size: cover;
+  display: table;
+
+}
+
+.wrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+path {
+  stroke: #fff;
+  fill: #fff;
+  stroke-dasharray: 2500;
+  opacity: 10;
+  animation: animate 5s cubic-bezier(0,0.23,1,.1);
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 2500;
+  }
+
+  30% {
+    opacity: 10;
+    fill: none;
+    stroke-dashoffset: 2500;
+  }
+
+  90% {
+    fill: rgba(255,255,255,0);
+  }
+
+  100% {
+    opacity: 10;
+    fill: rgba(255,255,255,1);
+    stroke-dashoffset: 0;
+  }
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+  }
+
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .fullscreen-bg {
+      background: url('blackhole.gif') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+      display: none;
+    }
+
+
+
+}

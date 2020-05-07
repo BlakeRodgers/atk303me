@@ -1,0 +1,257 @@
+
+body {
+    background-color: #d8d8d8;
+    opacity: 100%;
+}
+h1 {
+  text-align: center;
+}
+.social-menu ul {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    color: white;
+
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+    color: white;
+}
+.social-menu ul li .fa {
+   color: black;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+    opacity: 100%;
+}
+.social-menu ul li .fa:hover {
+    color: #00000;
+}
+.social-menu ul li a {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00000;
+}
+
+ li a{
+   color: white;
+   display:inline-block;
+     float: right;
+     margin: 10px;
+     font-family: Helvetica;
+   }
+
+   .text{
+   	font-size: 30px;
+   	color:#fff;
+   	font-family: sans-serif;
+   	text-shadow: 0px 15px 12px #000;
+    text-decoration-color: white;
+   }
+
+   body{
+   	margin: 0;
+   	padding: 0;
+   }
+   .container{
+   	width:100%;
+   	height:auto;
+   	display: flex;
+   	align-items: flex-start;
+   	flex-wrap: wrap;
+   }
+   .about{
+   	width:100%;
+   	height: 600px;
+   	background-size: cover;
+   	background-position: center;
+   	background-repeat: no-repeat;
+   	display: flex;
+   	align-items: center;
+   	justify-content: center;
+   	flex-wrap: wrap;
+   }
+   .text{
+   	font-size: 30px;
+   	color:#fff;
+   	font-family: sans-serif;
+   	text-shadow: 0px 15px 12px #000;
+    text-decoration-color: white;
+   }
+   .line{
+   	width:200px;
+   	height: 8px;
+   	background-color: #ffffff;
+   	display: block;
+   	position: relative;
+   	border-radius: 5px;
+   	left:10%;
+   	box-shadow: 0px 15px 12px 0px #000;
+   }
+   .content{
+   	width:100%;
+   	height:auto;
+   	background-color: #00000;
+   	font-size: 32px;
+   	font-family: audiowide;
+   	color:#fff;
+   	line-height: 30px;
+   	text-align: center;
+    text-decoration-color: white;
+   }
+   b{
+   	font-size: 50px;
+   	color:#000;
+   	font-weight: 500px;
+   }
+   footer{
+   	width:100%;
+   	height: auto;
+   	background-color: #333;
+   	color: #17ff8d;
+   	font-size: 23px;
+   	text-align: center;
+   	line-height: 50px;
+   }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  background-image: url("blackhole.gif");*/
+  background-repeat: none;
+  background-size: cover;
+  display: table;
+  text-decoration-color: white;
+
+}
+
+.wrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+}
+
+path {
+  stroke: #fff;
+  fill: #fff;
+  stroke-dasharray: 2500;
+  opacity: 10;
+  animation: animate 5s cubic-bezier(0,0.23,1,.1);
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 2500;
+  }
+
+  30% {
+    opacity: 10;
+    fill: none;
+    stroke-dashoffset: 2500;
+  }
+
+  90% {
+    fill: rgba(255,255,255,0);
+  }
+
+  100% {
+    opacity: 10;
+    fill: rgba(255,255,255,1);
+    stroke-dashoffset: 0;
+  }
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+  }
+
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .fullscreen-bg {
+      background: url('blackhole.gif') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+      display: none;
+    }
+    div{
+      opacity: 100%;
+      background-color: none;
+    }
+
+    }
